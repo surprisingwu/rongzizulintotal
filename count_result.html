@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./css/font-icons.css">
+		<link rel="stylesheet" href="./css/new_page1.css">
+		<script src="./js/summer.js" ></script>		
+		<script src="./js/jquery.min.js" ></script>
+		<script src="./js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="./js/new_main.js" ></script>
+        <script src="./js/echarts.common.min.js"></script>
+
+		<script src="./js/appsetting.js"></script>
+		<script src="./js/count_result.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header" >
+				<a  id="count_back" class="um-back"> <span>返回</span></a>
+				<h3 class="main_title">计算结果</h3>
+				<a id="count_result" class="um-header-right ">下一步</a>
+			</div>
+
+			<div  class="um-content" style="background: #FFFFFF">
+                <ul class="um-tabbar um-tabbar-underline um-tabbar-switch">
+                    <li class="active" data-tar='.news'><a>等额本息</a></li>
+                    <li data-tar='.prod'><a>等额本金</a></li>
+                </ul>
+				<div class="Artical">
+					<div class="news active ">
+                        <div id='myChart' style="height:300px;"></div>
+						<div class="main_data_detail">
+							<ul>
+								<li> <span style="background:#E8704E" ></span> <a>首付：</a> <i id="percentc"></i>  <b id="firstPayment"></b> </li>
+								<li> <span style="background:#24BDB6" ></span> <a>贷款总额：</a> <i id="percentd"></i> <b id="loanPay"></b></li>
+								<li> <span style="background:#7C77B9" ></span> <a>利息总额：</a> <i id="percentb"></i> <b id="totalLx"></b></li>
+								<li> <span style="background:#2dbbfa"  ></span> <a>月供：</a> <i id="percenta"></i> <b id="resultCS"></b></li>
+							</ul>
+						</div>
+					</div>
+					<div class="prod">
+						<div id='myChart1' style="height:300px;"></div>
+						<div class="main_data_detail">
+							<ul>
+								<li> <span style="background:#E8704E" ></span> <a>首付：</a> <i id="percentc1"></i>  <b id="firstPayment1"></b> </li>
+								<li> <span style="background:#24BDB6" ></span> <a>贷款总额：</a> <i id="percentd1"></i> <b id="loanPay1"></b></li>
+								<li> <span style="background:#7C77B9" ></span> <a>利息总额：</a> <i id="percentb1"></i> <b id="totalLx1"></b></li>
+								<li> <span style="background:#2dbbfa"  ></span> <a>月供：</a>  <a id="resultCS1_minus" style="color: #bcc0c8; margin-left: 0px"></a>  <i id="percenta1"></i> <b id="resultCS1"></b></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<style scoped>
+	.um-header h3{
+		color: #2dbbfa;
+		font-weight: 500;
+	}
+	.um-header-right{
+		color: #2dbbfa;
+		font-size: 14px;
+	}
+	.um-header{
+		background: #FFFFFF;
+		-webkit-border-image：none;
+		border-image: none;
+		border-bottom: 1px solid #2dbbfa;
+	}
+	.um-back{
+		color: #2dbbfa;
+		left: 0px;
+	}
+	.um-back span{
+		font-size: 14px;
+	}
+	.um-tabbar-underline > li > a{
+        font-size: 15px;
+		padding: 9px 0px;
+		font-family: PingFang-SC-Regular;
+	}
+	div.Artical>div {
+		display:none;
+		color:#555;
+	}
+	div.Artical>div.active {
+		display:block;
+	}
+	div.Artical>div.download {
+		background:lightpink;
+	}
+	.main_data_detail ul li span{
+		display:inline-block;
+		width:15px;
+		height:15px;
+		border:1px solid #DDDDDD;
+		border-radius:50%;
+		background:#EE9143;
+		position: absolute;
+		top: 4px;
+		left:0px;
+	}
+	.main_data_detail ul li a {
+		margin-left:20px;
+		color: #8e8e93;
+	}
+	.main_data_detail ul li {
+		margin:5px 0px;
+		position: relative;
+	}
+	.main_data_detail ul li i{
+        font-style: normal;
+		/*margin-left: 40%;*/
+		color: #bcc0c8 ;
+		position: absolute;
+		left: 55%;
+	}
+	.main_data_detail {
+		margin:9px 15px;
+		font-size: 15px;
+	}
+	.main_data_detail ul li b{
+		display:inline-block;
+		float: right;
+		color: #151515;
+	}
+</style>

@@ -1,0 +1,181 @@
+/*头部的一些信息*/
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 1.173333rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0;
+    box-sizing: border-box;
+    border-bottom: 0.026667rem solid #2DBBFA;
+    background: #fff;
+    padding: 0 0.4rem;
+}
+i.turnBackLastPage {
+    width: 1.333333rem;
+    height: 100%;
+    background: url(../img/back@2x.png) no-repeat left center;
+    background-size: 0.293333rem;
+}
+@media  (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    i.turnBackLastPage{
+       background: url("../img/back@3x.png") no-repeat left center; 
+        background-size: 0.293333rem;
+    }
+}
+h3{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 17px;
+	color: #2DBBFA;
+}
+.headerOperation{
+	width: 1.333333rem;
+	height: 1.173333rem;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1.173333rem;
+	color: #2DBBFA;
+}
+/*内容部分*/
+main {
+    padding-top: 1.173333rem;
+    width: 100%;
+    font-size: 0;
+    background: #fff;
+}
+.photoWraper {
+    padding: 0.666667rem 0.4rem;
+}
+.photoContainer {
+    height: 5.333333rem;
+    border: 0.026667rem solid #CCC;
+    border-radius: 0.133333rem;
+}
+ul.userMesgWraperList {
+    padding-left: 0.4rem;
+}
+li.userMesgWraperListItem {
+    font-size: 0;
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 0.026667rem solid #F7F7F7;
+    padding-right: 0.8rem;
+    height: 1.333333rem;
+    align-items: center;
+}
+label.userMesgWraperListItemText {
+    font-size: 15px;
+    color: #666;
+}
+input.userMesgWraperListItemVal,span.userMesgWraperListItemVal {
+    border: none;
+    outline: none;
+    text-align: right;
+    height: 100%;
+    flex: 1;
+    color: #333;
+}
+span#maritalStatus {
+    font-size: 15px;
+    line-height: 1.306667rem;
+    color: #CCC;
+}
+input::-webkit-input-placeholder{
+	color: #CCC;
+	font-size: 15px;
+}
+input::input-placeholder{
+	color: #CCC;
+}
+textarea#detailAdressContainerVal {
+    height: 70px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+	padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+}
+textarea::-webkit-textarea-placeholder{
+	color: #CCC;
+}
+textarea::placeholder{
+	color: #CCC;
+}
+/*身份证识别的一些信息*/
+li.specialUserMesgListItem {
+    height: 4.533333rem;
+    width: 100%;
+}
+span.specialUserMesgListItemText {
+    font-size: 15px;
+    display: block;
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+    color: #666;
+}
+span.specialUserMesgListItemIcon {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../img/caramahehe.png) no-repeat center;
+    background-size: contain;
+}
+/*选择婚姻类型的样式*/
+.selectMarriageType,.takePhotosTypeWraper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+.closeTotastContainer,.closeTakePhotosTypeWraper {
+    height: 100%;
+    width: 100%;
+}
+.selectMarriageTypeContainer,.selectTakePhotosTypeContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ccc;
+    font-size: 0;
+}
+.selectMarriageTypeItem,.selectTakePhotosTypeItem {
+    height: 1.386667rem;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 0.026667rem solid #EEE;
+    text-align: center;
+    line-height: 1.386667rem;
+    color: #00A0E8;
+    background-color: #fff;
+}
+.borderBottomNone{
+	border-bottom: none;
+}
+button.selectMarriageTypeCancelBtn,.selectTakePhotosTypeCancelBtn {
+    display: block;
+    height: 1.386667rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 0.16rem;
+    font-size: 16px;
+    color: #00A0E8;
+    background-color: #fff;
+}
+/*弹出层的样式*/
+.totastForbiddenScroll{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}

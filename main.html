@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./css/font-icons.css">
+        <link rel="stylesheet" type="text/css" href="./css/iuapmobile.um.listgroup-2.7.0.css">
+         <link rel="stylesheet" href="./css/iscroll.css" />
+         <link rel="stylesheet" href="./css/iscroll.css" /> 
+        <style>
+          #select1_dummy{
+        	border:none;
+        	padding-left:10px;
+        	color:#555;
+        	font-size:17px;
+          }
+          #select1_dummy:disabled{
+        	background:#fff;
+          }
+          
+          #select2_dummy{
+        	border:none;
+        	padding-left:10px;
+        	color:#555;
+        	font-size:17px;
+          }
+          #select2_dummy:disabled{
+        	background:#fff;
+          }
+        </style>
+
+
+		<script src="./js/summer.js" ></script>		
+		<script src="./js/jquery.min.js" ></script>
+		<script src="./js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+        <script type="text/javascript" src="./js/knockout-2.2.0.js"></script>
+        <script type="text/javascript" src="./js/Frameworks/iuapmobile.frameworks.listgroup-2.7.0.js"></script>
+        <script src="./js/echarts.common.min.js"></script>
+        <script src="./js/iscroll.js"></script>
+        <!-- 接口 -->
+        <script src="./js/main_guess.js"></script>
+        <script src="./js/iscroll.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header" >
+				<h3>导航栏</h3>
+			</div>
+
+			<div class="um-content" id="main">
+
+       <!--租赁物信息-->
+<ul class="um-list">
+    <li class="um-open">
+        <a href="javascript:void(0);" id="um-collapse-btn" class="um-collapse-btn btn">租赁物信息</a>
+        <ul class="um-list um-collapse-content" id="um-collapse-content">
+             <li>
+				<div class="um-label um-box-justify ">
+					<div>经销商:</div>
+					<div class="seller_componey">
+						<input type="text"  id='select1_dummy' placeholder="请选择经销商"/>
+						<i class="ti-angle-right  period_way_icon"></i>
+					</div>
+				</div>
+            </li>
+
+            <li>
+				<div class="um-label um-box-justify">
+					<div>选购品牌:</div>
+					<div id="carChoice">
+						<span class="mr15" >奥迪</span><i class="ti-angle-right"></i>
+					</div>
+				</div>
+            </li>
+            <li>
+				<div class="um-label um-box-justify">
+					<div>系列:</div>
+					<div>
+						<span class=" mr15" style="margin-right: 22px">C级</span>
+					</div>
+				</div>
+            </li>
+            <li>
+				<div class="um-label um-box-justify">
+					<div>型号:</div>
+					<div>
+						<span class=" mr15" style="margin-right: 22px">2017款C级 奥迪A6L</span>
+					</div>
+				</div>
+            </li>
+            <li>
+				<label class="um-label um-box-justify">
+					<div>指导价:</div>
+					<div id="main_price">
+						<input type="text" class="form-control" placeholder="元">
+					</div>
+				</label>
+            </li>
+            <li>
+				<label class="um-label um-box-justify">
+					<div>是否二手:</div>
+					<div style="margin-right: 10px">
+						<label class="um-switch1">
+							<input type="checkbox" value="on" checked="checked">
+							<div class="um-track">
+								<div class="um-handle">
+								</div>
+							</div>
+						</label>
+					</div>
+				</label>
+            </li>
+
+             <li>
+				<div class="um-label um-box-justify ">
+					<div>租赁方式:</div>
+					<div class="selectComponey">
+						<input type="text"  id='select2_dummy' placeholder="租赁方式"/>
+						<i class="ti-angle-right  period_way_icon"></i>
+					</div>
+				</div>
+            </li>           
+
+            <li>
+				<label class="um-label um-box-justify">
+					<div id="um-box-justify_left">实际成交价:</div>
+					<div id="um-box-justify_right">
+						<input type="text" class="form-control" placeholder="你好">
+					</div>
+				</label>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+				<!--方案信息-->
+<ul class="um-list">
+    <li>
+        <a href="javascript:void(0);" id="um-collapse-btn" class="um-collapse-btn btn">方案信息</a>
+        <ul class="um-list um-collapse-content" id="um-collapse-content">
+            <li>
+				<div class="um-label um-box-justify">
+					<div>金融方案</div>
+					<div id="perioyPlan">
+						<span class=" mr15">请选择</span><i class="ti-angle-right"></i>
+					</div>
+				</div>
+            </li>
+            <li>
+				<div class="um-label um-box-justify">
+					<div>首付款:</div>
+				        <div class="mt15 mainLable" >
+			            	<form>
+			            		<div class="tc"><output for="range" name="x">40</output></div>
+			            		<input type="range" oninput="x.value=parseInt(range.value)" name="range" value=40 min="0" max="100" step="0.1">
+			            	</form>	
+			            </div>
+				</div>
+            </li>
+            <li>
+				<div class="um-label um-box-justify">
+					<div>保证金:</div>
+				        <div class="mt15 mainLable">
+			            	<form>
+			            		<div class="tc"><output for="range" name="x">40</output></div>
+			            		<input type="range" oninput="x.value=parseInt(range.value)" name="range" value=40 min="0" max="100" step="0.1">
+			            	</form>	
+			            </div>
+				</div>
+            </li>
+            
+            <li>
+				<div class="um-label um-box-justify">
+					<div>尾款:</div>
+				        <div class="mt15 mainLable">
+			            	<form>
+			            		<div class="tc"><output for="range" name="x">40</output></div>
+			            		<input type="range" oninput="x.value=parseInt(range.value)" name="range" value=40 min="0" max="100" step="0.1">
+			            	</form>	
+			            </div>
+				</div>
+            </li>
+            
+            
+          <!--  期数 -->
+<!--            <li>
+				<div class="period_btn um-label um-box-justify">
+					<div>期数:</div>
+						<div class="btn-group btn-group-justify">
+							<button type="button" class="btn um-btn-info">12</button>
+							<button type="button" class="btn um-btn-success">24</button>
+							<button type="button" class="btn um-btn-primary">36</button>
+						</div>
+					<div>月</div>
+				</div>
+            </li>-->
+			<li>
+				<div class="period_btn um-label um-box-justify">
+					<div>期数:</div>
+					<!-- 						<div class="btn-group btn-group-justify">
+                                                <button type="button" class="btn um-btn-info">12</button>
+                                                <button type="button" class="btn um-btn-success">24</button>
+                                                <button type="button" class="btn um-btn-primary">36</button>
+                                            </div> -->
+
+					<div class="main_periods_btn">
+						<ul class="um-tabbar">
+							<li><a>12</a></li>
+							<li class="active"><a>24</a></li>
+							<li><a>36</a></li>
+						</ul>
+					</div>
+					<div>月</div>
+				</div>
+			</li>
+
+            <li>
+				<label class="um-label um-box-justify">
+					<div>利率:</div>
+					<div class="mainFormControl">
+						<input type="text" class="form-control" placeholder="请输入">
+					</div>
+				</label>
+            </li>
+            
+            <li>
+				<label class="um-label um-box-justify">
+					<div>购置税:</div>
+					<div class="mainFormControl">
+						<input type="text" class="form-control"  placeholder="请输入">
+					</div>
+				</label>
+            </li>            
+
+            <li>
+				<label class="um-label um-box-justify">
+					<div>保险费:</div>
+					<div class="mainFormControl">
+						<input type="text" class="form-control"  placeholder="请输入">
+					</div>
+				</label>
+            </li> 
+            
+            <li>
+				<label class="um-label um-box-justify">
+					<div>上牌费:</div>
+					<div class="mainFormControl">
+						<input type="text" class="form-control"  placeholder="请输入">
+					</div>
+				</label>
+            </li> 
+            
+            <li>
+				<label class="um-label um-box-justify">
+					<div>车船使用税:</div>
+					<div class="mainFormControl">
+						<input type="text" class="form-control"  placeholder="请输入">
+					</div>
+				</label>
+            </li>             
+
+        </ul>
+    </li>
+</ul>
+
+
+
+<!-- 测算btn -->
+
+
+          <button class="btn um-btn-primary" style="margin-top: 5px">测&nbsp;&nbsp;算</button>
+
+				<div class="main_choice_btn">
+					<ul class="um-tabbar">
+						<li><a>等额本息</a></li>
+						<li class="active"><a>等额本金</a></li>
+					</ul>
+				</div>
+<!-- 柱状图 -->
+            <div id='myChart' style="height:500px;"></div>
+				<div class="main_data_detail">
+					<ul>
+						<li> <span style="background:#C23531" ></span> <a>首付：</a> <b>30万元</b> </li>
+						<li> <span style="background:#476984" ></span> <a>贷款总额：</a> <b>100万元</b></li>
+						<li> <span style="background:#61A0A8" ></span> <a>利息总额：</a> <b>200万元</b></li>
+						<li> <span  ></span> <a>月供：</a> <b>6000.00元</b></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+<!-- footer -->
+			<div class="um-footer">
+				
+			</div>
+		</div>
+
+        <script>
+            $(function () {		
+                //基于准备好的dom,初始化echarts实例
+        		var myChart=echarts.init(document.getElementById('myChart'));
+        		//指定图表的配置项和数据
+        		var	option={
+        			title : {
+        				text: '测算结果详情',
+        				x:'center',
+        				y:10,
+        				textStyle: {
+        					color: '#333',
+        					fontSize: 18
+        				}
+        			},
+        		    tooltip : {                                 //提示框浮层内容格式器，支持字符串模板和回调函数两种形式
+        				trigger: 'item',
+        				formatter: "{a} <br/>{b} : {c} ({d}%)"  // {a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）
+        		    },
+        			legend: {
+        				x : 'center',
+        				y : 'bottom',
+        				itemGap:15, //legend元素间隔
+        				itemWidth: 30, //图标宽度
+        				itemHeight: 15, //图标高度
+        				textStyle: {
+        					color: '#333',
+        					fontSize: 16,
+        			    },
+        			    data:['首付','贷款总额','利息总额']
+        	        },
+        		    calculable : false,
+                    color:['red', 'green','yellow'],
+        		    series : [{
+        			  name:'单月数据详情(单位：元)',
+        			  type:'pie',
+        			  radius : '50%',
+        			  center: ['50%', '50%'],
+        			  data:[
+        					{value:60, name:'首付'},
+        					{value:100, name:'贷款总额'},
+        					{value:90, name:'利息总额'},
+        				]
+        			}]
+        		};
+        		// 使用刚指定的配置项和数据显示图表。
+        		myChart.setOption(option);	
+        		// 点击事件操作
+        		 myChart.on('click', function (param) {
+        			alert(JSON.stringify(param.value));
+        		}); 
+            });
+        </script>
+
+	</body>
+</html>
+<style scoped>
+#main_price{
+  margin-right:22px;
+}
+#main .mr15 {
+	margin-right: 5px;
+}
+.um-label .form-control {
+  text-align:right;
+}
+.mainLable {
+	margin-right: 8px;
+}
+#um-box-justify_left {
+  flex:1}
+#um-box-justify_right{
+  flex:2;
+}
+#um-box-justify_right input{
+  margin-left:70%;
+}
+#um-collapse-content {
+  padding-left:0px;
+}
+#um-collapse-btn {
+  font-weight: bold;
+}
+.um-box-justify .mt15 {
+  width:60%;
+}
+.um-box-justify .tc{
+  display:inline-block;
+  float:right;
+}
+.btn-group-justify{
+	margin-left: 50%;
+}
+.um-box-justify .mt15 input {
+   width: 85%;
+   float: left;
+   margin-top:-4px;
+   
+}
+.mainFormControl{
+	margin-right: 12px;
+}
+.period_btn .btn{
+   padding:0px;
+   margin-right:10px;
+}
+.period_btn .um-btn-info,.period_btn .um-btn-success, .period_btn .um-btn-primary {
+   background-color:#FFFFFF;
+}
+.period_way_icon{
+   float: right;
+   margin-top:1%;
+}
+#select1_dummy {
+  text-align:right;
+  margin-right:5px;
+}
+#select2_dummy {
+  text-align:right;
+  margin-right:5px;
+}
+.main_data_detail ul li span{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border:1px solid #DDDDDD;
+	border-radius:50%;
+	background:#EE9143;
+	position: absolute;
+	top: 2px;
+	left:0px;
+}
+.main_data_detail ul li a {
+	margin-left:25px;
+	color: #000;
+}
+.main_data_detail ul li {
+	margin:5px 0px;
+	position: relative;
+}
+.main_data_detail {
+	margin:9px 15px;
+}
+.main_data_detail ul li b{
+	display:inline-block;
+	float: right;
+}
+.main_choice_btn{
+	margin-top:20px;
+}
+.main_choice_btn .um-tabbar{
+	width:60%;
+	margin:0 auto;
+	border: 1px solid #00CD00;
+}
+.main_choice_btn .um-tabbar > li.active > a {
+	background-color:#00CD00;
+}
+.main_choice_btn .um-tabbar > li > a {
+	border-right:#00CD00;
+}
+.main_periods_btn{
+	margin-left:45%;
+	width: 25%;
+}
+</style>

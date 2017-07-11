@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./css/font-icons.css">
+		<link rel="stylesheet" href="./css/new_page1.css">
+        <link rel="stylesheet" type="text/css" href="./css/iuapmobile.um.sortlist-2.7.0.css">
+  
+        <link rel="stylesheet" type="text/css" href="./css/iuapmobile.um.listview.css">
+        <link rel="stylesheet" type="text/css" href="./css/iuapmobile.um.listview.css">
+      <link rel="stylesheet" href="./css/style_new.css">
+        <style>
+        	.msg-info {
+        		position: relative;
+        	}
+        	.msg-info .um-badge {
+        		position: absolute;
+        		right: -10px;
+        		font-size: 12px;
+        	}
+        	.msg-header {
+        		width: 40px;
+        		height: 40px;
+        		line-height: 40px;
+        		background: blue;
+        		border-radius: 50%;
+        		text-align: center;
+        		color: white;
+        	}
+        	.to-store {
+        		background: #EE9143;
+        		color: white;
+        	}
+        </style>
+
+
+        <style>
+        	.msg-info {
+        		position: relative;
+        	}
+        	.msg-info .um-badge {
+        		position: absolute;
+        		right: -10px;
+        		font-size: 12px;
+        	}
+        	.msg-header {
+        		width: 40px;
+        		height: 40px;
+        		line-height: 40px;
+        		background: blue;
+        		border-radius: 50%;
+        		text-align: center;
+        		color: white;
+        	}
+        	.to-store {
+        		background: #EE9143;
+        		color: white;
+        	}
+        </style>
+
+		<script src="./js/summer.js" ></script>
+
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.charfirst.pinyin.js"></script>
+		<script src="js/sidenav.min.js"></script>
+		<script type="text/javascript" src="js/sort.js"></script>
+
+		<script src="./js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="./js/new_page1.js" ></script>
+        <script type="text/javascript" src="./js/knockout-2.2.0.js"></script>
+        <script type="text/javascript" src="./js/Frameworks/iuapmobile.frameworks.sortlist-2.7.0.js"></script>
+        <script type="text/javascript" src="./js/knockout.js"></script>
+        <script type="text/javascript" src="./js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+        <script type="text/javascript" src="./js/knockout.js"></script>
+        <script type="text/javascript" src="./js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+        <script src="./js/main_guess.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+
+		
+        <div class="um-header" >
+        	<a  href="#" id="goBackBtn"  class="um-back">返回</a>
+        	<h3>选择品牌</h3>
+        </div>
+
+		<!-- content -->
+			<div class="um-content">
+<div id="car_choice">
+<!--  jquery通讯录插件   -->
+				
+	<div id="letter"></div>
+	<div class="sort_box">
+	  
+		<div class="sort_list">
+		<a href="javascript:;" class="toggle" id="sidenav-toggle">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">奥迪</div>
+		</a>
+		</div>
+      
+
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">阿斯顿·马丁</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">宝马</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">奔驰</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">本田</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">比亚迪</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">宾利</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">长安</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">长城</div>
+		</div>
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">东风</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">东南</div>
+		</div>
+
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">法拉利</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">丰田</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">福特</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">福田</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">观致</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">哈弗</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">海马</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">悍马</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">华泰</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">Jeep</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">吉利</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">江铃</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">凯迪拉克</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">兰博基尼</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">劳斯莱斯</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">雷克萨斯</div>
+		</div>
+		
+		<div class="sort_list">
+			<div class="num_logo">
+				<img src="./img/img_list.png" alt="">
+			</div>
+			<div class="num_name">林肯</div>
+		</div>
+	</div>
+	<div class="initials">
+		<ul>
+			<li><img src="./img/068_list.png"></li>
+		</ul>
+	</div>				
+<!--  jquery通讯录插件结束   -->	
+
+<!--<nav class="sidenav" data-sidenav data-sidenav-toggle="#sidenav-toggle">-->
+
+
+
+<!--<div class="um-label um-box-justify">-->
+	<!--<div>-->
+		<!--<img class="img-rounded" src="./img/img_list.png" width=35 height=35 alt="">-->
+		<!--<span>宝马</span>-->
+	<!--</div>-->
+<!--</div>-->
+
+<!--<div class="car_choice_p"> <p>选择车系</p> </div>-->
+
+<!--<div class="um-listview-wrap" id="listview">-->
+	<!--<ul class="um-list um-no-active" data-bind="foreach: data">-->
+		<!--<li class="um-listview-row">-->
+			<!--<a href="#" class="um-list-item um-swipe-action um-no-icon">-->
+				<!--<div class="um-swipe-btns">-->
+					<!--<span class="um-swipe-btn to-store ti-star" data-bind="click:$parent.rowCollect"></span>-->
+					<!--<span class="um-swipe-btn um-delete ti-trash"></span>-->
+				<!--</div>-->
+				<!--<div class="um-list-item-media msg-info">-->
+					<!--<img alt="" data-bind="attr:{'src': img}" width=50>-->
+				<!--</div>-->
+				<!--<div class="um-list-item-inner">-->
+					<!--<div class="um-list-item-body">-->
+						<!--<span class="um-text-overflow car_choice_span" data-bind="text:title"></span>-->
+					<!--</div>-->
+				<!--</div> -->
+			<!--</a>-->
+		<!--</li>-->
+	<!--</ul>-->
+<!--</div>-->
+
+<!--</nav>	-->
+			
+</div>	
+
+
+
+			
+			</div>
+        <!--  footer -->
+			<div class="um-footer">
+				
+			</div>
+		</div>
+
+        <script>
+        
+        
+        </script>
+		<!--<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/jquery.charfirst.pinyin.js"></script>-->
+		 <!--<script src="js/sidenav.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/sort.js"></script>-->
+       
+        <script>$('[data-sidenav]').sidenav();</script>
+
+        <script>
+        	$(function() {
+        		//构造控件实例
+        		var listview = UM.listview("#listview");
+        		//Knockout绑定
+        		var ViewModel = function() {
+        		};
+        		var jsonArray = [{
+        			"img" : "./img/img_list.png",
+        			"title": "宝马1系",
+        		},{
+        			"img" : "./img/img_list.png",
+        			"title": "宝马2系",
+        		},{
+        			"img" : "./img/img_list.png",
+        			"title": "宝马3系",
+        		},{
+        			"img" : "./img/img_list.png",
+        			"title": "进口宝马1系",
+        		},{
+        			"img" : "./img/img_list.png",
+        			"title": "宝马7系",		
+        		},{
+        			"img" : "./img/img_list.png",
+        			"title": "宝马5系",	
+        		}]
+        		var viewModel = new ViewModel();
+        		viewModel.data = ko.observableArray(jsonArray);
+        		viewModel.rowCollect = function(data, e) {
+        			alert("点击收藏！这一行的数据是" + JSON.stringify(data));
+        			var $row = $(e.target).closest(".um-listview-row");
+        			listview.hideItemMenu($row);
+        		}
+        		ko.applyBindings(viewModel);
+        		//添加控件方法
+        		listview.on("pullDown", function(sender) {
+        			//这是可以编写列表下拉加载逻辑，参数sender即为当前列表实例对象
+        			/*var row = {
+        				"sender" : "king4@yonyou.com",
+        				"img" : "./img/sender4.png",
+        				"title": "【用友大学友学堂】Uber、奇虎360、百度等公司大咖来分享经验了！",
+        				"msgNum" : 2,
+        				"lastMsg" : "用友大学友学堂年终特别策划,原汁原味的互联网时代企业转型案例,Uber、奇虎360、百度等公司大咖为你直播分享心得",
+        				"lastTime" : "12月22日",
+        			};
+        			viewModel.data.unshift(row);*/
+        			sender.refresh();
+        		});
+        		listview.on("pullUp", function(sender) {
+        			//这是可以编写列表上拉刷新逻辑，参数sender即为当前列表实例对象
+        			/*var row = {
+        				"sender" : "fire5@yonyou.com",
+        				"img" : "./img/sender5.png",
+        				"title": "【培训通知】：1月15日某某教授《用户体验、服务设计与智慧的钱》讲座",
+        				"msgNum" : 6,
+        				"lastMsg" : "2016年1月15日（周五），有幸邀请到北京科技大学教授，博士生导师，覃京燕教授来用友做一期《用户体验、服务设计与智慧的钱》讲座，内容如下。",
+        				"lastTime" : "12月22日"
+        			};
+        			viewModel.data.push(row);*/
+        			sender.refresh();
+        		});
+        		listview.on("itemClick", function(sender, args) {
+        			//这里可以处理行点击事件，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+        			alert("您点击了列表第" + (args.rowIndex + 1) + "行！");
+        		});
+        		listview.on("itemDelete", function(sender, args) {
+        			//这是可以编写行删除逻辑，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+        			var item = viewModel.data()[args.rowIndex];
+        			alert("您点击了删除按钮!这一行的数据是" + JSON.stringify(item));
+        			/* args.$target.slideUp(500, function() {
+        			 viewModel.data.remove(item);
+        			 }); */
+        		});
+        		listview.on("itemSwipeLeft", function(sender, args) {
+        			//这里可以处理行左滑事件，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+        			/*sender.showItemMenu(args.$target);*/
+        		});
+        		listview.on("tapHold", function() {
+        			//这里可以处理长按事件
+        			/*console.log("您长按了列表！");*/
+        		});
+        	});
+        	
+        </script>
+
+	</body>
+</html>
+<style>
+#car_choice .sort_list{
+  height:60px;
+  
+}
+#car_choice .sort_list .num_logo{
+  border-radius:0px;
+}
+#car_choice {
+ background:#ffffff;
+}
+#car_choice .sort_letter{
+ background:#ddd;
+}
+/*  #car_choice  .toggle {
+ 	display: block;
+ 	height: 72px;
+ 	line-height: 72px;
+ 	text-align: center;
+ 	width: 72px;
+  }  */
+ #car_choice .sidenav{
+  	background:#ffffff;
+  	box-shadow:2px 2px 6px rgba(0,0,0,.3);
+  	display:block;
+  	font-size:16px;
+  	font-weight:400;
+  	height:100%;
+  	right:0;
+  	position:fixed;
+  	overflow:auto;
+  	transform:translate(326px,0);
+  	transition:transform .3s;top:0;
+  	width:75%;
+  	z-index:100}
+ #car_choice .sidenav.show{transform:translate(0,0)}
+ #car_choice .sidenav .um-label {
+  height:65px;
+  }
+  .car_choice_p {
+   background:#ddd;
+   
+   padding: 5px 0px;
+  
+  }
+  .car_choice_p p{
+   margin-left:12px;
+  }
+  #car_choice .um-list a.um-list-item{
+   background:#ffffff;
+  }
+  .car_choice_span{
+   height:40px;
+   line-height: 40px;
+  }
+</style>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./css/font-icons.css">
+		<script src="./js/summer.js" ></script>		
+		<script src="./js/jquery.min.js" ></script>
+		<script src="./js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+
+		<script src="./js/plan_choice.js"></script>
+		<script src="./js/appsetting.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+
+			<div class="um-header" >
+				<a id="plan_back" class="um-back"><span>返回</span></a>
+				<h3 class="main_title">金融方案</h3>
+			</div>
+        <div class="um-content"  id="plan_choice" >
+
+	    </div>
+
+		</div>
+	</body>
+</html>
+
+<style>
+  body{
+    background:#ffffff;
+  }
+  .um-back span{
+	  color: #2dbbfa;
+	  font-size: 14px;
+  }
+  #plan_choice {
+	  /*height: 20rem;*/
+	  background: #FFFFFF;
+  }
+  .um-header{
+	  background: #FFFFFF;
+	  -webkit-border-image:none;
+	  border-image:none;
+	  border-width: 0px;
+	  border-bottom: 1px solid #2dbbfa;
+  }
+  .um-header h3{
+	  color: #2dbbfa;
+	  font-weight: 500;
+  }
+  .planChoice{
+	  margin-top: 10px;
+  }
+  .choice_box {
+    display:flex;
+  }
+  .choice_box1,.choice_box2,.choice_box3 {
+    flex:1;
+    height:6rem;
+    font-size:12px;
+    border:1px solid #ddd;
+    
+  }
+  .choice_box2 {
+    border-left:none; 
+    border-right:none; 
+  }
+  .choice_box1_num{
+    text-align: center;
+    margin-top:1rem;
+  }
+  .choice_box1_num span{
+    font-size:26px;
+    color: blue;
+  }
+  .choice_box1_word{
+    text-align: center;
+    margin-top:0.5rem;
+  }
+  .choice_title{
+    margin-bottom:10px;
+    margin-top:5px;
+    position:relative;
+  }
+  .choice_title_name {
+    margin-left:15px;
+    color:red;
+  }
+  .choice_title_btn {
+   position:absolute;
+   bottom: 0px;
+   right: 2rem;
+   color: blue;
+   cursor: pointer;
+   
+  }
+</style>
+
+
+
+
+

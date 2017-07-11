@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="./css/iuapmobile.um.css">
+	<link rel="stylesheet" href="./css/font-icons.css">
+	<link rel="stylesheet" href="./css/iscroll.css" />
+	<link rel="stylesheet" href="./css/LArea.css" />
+	<link rel="stylesheet" href="./css/businessCard1.css">
+
+	<style>
+		.um-time{
+			background:#ffffff;
+			border-top:1px solid #dddddd;
+			border-bottom:1px solid #dddddd;
+		}
+		.um-time-list{
+			height:46px;
+			line-height: 46px;
+		}
+		.um-time-list:first-child{
+			border-bottom:1px solid #dddddd;
+		}
+		.um-time-txt{
+			float: left;
+			color:#8c8d8e;
+		}
+		.um-time-list .fr{
+			position:relative;
+			float: right;
+			margin-right:30px;
+		}
+		.um-time-list .fr:after{
+			content: "";
+			position:absolute;
+			right:-15px;
+			top:15px;
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			border-right: 2px solid #8c8d8e;
+			border-top: 2px solid #8c8d8e;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		.um-time-list input{
+			display:block;
+			width: 180px;
+			height: 45px;
+			line-height:45px;
+			border: none;
+			outline: none;
+			text-align: right;
+			background: #fff;
+		}
+	</style>
+
+
+	<style>
+		.um-label  input {
+			width:200%;
+			height: 40px;
+			font-size: 18px;
+			border:none;
+		}
+	</style>
+
+
+	<style>
+		input{outline:none}
+		#select1_dummy:disabled{
+			background:#fff;
+		}
+	</style>
+
+
+	<style scoped>
+		.area_ctrl{
+			background-color: #FFFFFF;
+		}
+		.larea_cancel{
+			color: #999;
+		}
+		.larea_finish{
+			color: #2dbbfa;
+		}
+		.area_btn_box{
+			background-color: #FFFFFF;
+		}
+		div.Artical>div {
+			display:none;
+			color:#555;
+		}
+		div.Artical>div.active {
+			display:block;
+		}
+		div.Artical>div.download {
+			background:lightpink;
+		}
+		.um-tabbar-underline {
+			border-bottom: 1px solid #f7f7f7;
+			border-top: 1px solid #2dbbfa;
+		}
+		.box1_h5{
+			font-size: 17px;
+			text-align: center;
+			padding: 5px 0px 15px 0px;
+			border-bottom: 1px solid #2dbbfa;
+		}
+		.um-check-group{
+			margin: 0px;
+		}
+		.um-check-group-item {
+			padding: 12px 0px;
+			margin: 0px 15px;
+		}
+		.um-check-group-item:first-child{
+			border-width: 0px;
+		}
+		.um-header{
+			background: #FFFFFF;
+		}
+		.um-back{
+			color: #2dbbfa;
+			left: 0px;
+		}
+		.um-back span{
+			font-size: 14px;
+		}
+		.um-header h3{
+			color: #2dbbfa;
+			font-weight: 500;
+		}
+		.um-header-right{
+			color: #2dbbfa;
+			font-size: 14px;
+		}
+		.um-tabbar-underline > li.active > a{
+			color: #2dbbfa;
+		}
+		.um-tabbar-underline > li > a {
+			color: #9b9b9b;
+			font-size: 13px;
+		}
+		.um-tabbar-underline > li.active {
+			border-bottom: 0px;
+		}
+		.um-tabbar-left {
+			margin-left: 30%;
+		}
+		.um-tabbar-right {
+			margin-right: 30%;
+		}
+		.um-input-text {
+			padding: 12px 0px;
+			width: 96%;
+			margin-left: 4%;
+			border-bottom:1px solid #f7f7f7;
+		}
+		.um-input-left{
+			font-size: 15px;
+			font-family: PingFangSC-Regular;
+			color:  #666666;
+			display: inline-block;
+			width: 25%;
+		}
+		#select1_dummy {
+			font-size: 15px;
+			color: #000;
+			width: 100%;
+			border:none;
+			text-align: right;
+		}
+		#caseSource{
+			font-size: 15px;
+			color: #000;
+			width: 100%;
+			border:none;
+			text-align: right;
+		}
+		#subArea {
+			text-align: right;
+			font-size: 15px;
+			color: #000;
+			border: none;
+			width: 70%;
+		}
+		#markArea {
+			text-align: right;
+			font-size: 15px;
+			color: #000;
+			border: none;
+			width: 70%;
+		}
+		.demo4 {
+			text-align: right;
+			font-size: 15px;
+			color: #000;
+			border: none;
+			width: 70%;
+			text-align: right;
+		}
+		.demo3 {
+			text-align: right;
+			font-size: 15px;
+			color: #000;
+			border: none;
+			width: 50%;
+			text-align: right;
+		}
+		.um-label  input {
+			width:75%;
+			margin-left: 20px;
+		}
+		.area_choice {
+			width: 100%;
+		}
+		.area_choice span{
+			display: inline-block;
+			width: 25%;
+		}
+		.um-input-text-a {
+			padding: 13.5px 0px;
+
+		}
+		.sell_componey{
+			width: 80%;
+		}
+		.layui-m-layershade{
+			background-color: rgba(0,0,0, .2) !important;
+		}
+		.um-check-group-item:first-child, .um-check-group-item:last-child{
+			-webkit-border-image: none;
+			border-image: none;
+			border-width:0;
+
+		}
+		.um-check-group-item:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: block;
+			z-index: 2;
+			-webkit-border-image: none;
+			border-image: none;
+			/* border-width: 0 0 1px 0; */
+		}
+		.um-check-group-item{
+			border-bottom: 1px solid #ddd !important;
+		}
+		#positionFlag{
+			position: relative;
+		}
+		#positionPoint{
+			position: absolute;
+			right: 15px;
+		}
+		#positionPoint2{
+			position: absolute;
+			right: 20%;
+			top:20%;
+		}
+		#positionPoint3{
+			position: absolute;
+			right: 20px;
+		}
+		.um-tabbar {
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			border-radius: 0px;
+		}
+		.pay_range{
+			position: absolute;
+			right: 43px;
+		}
+		#positionFlag2{
+			position: relative;
+		}
+		#positionFlag3,#positionFlag4{
+			position: relative;
+		}
+		.tc{
+			position: absolute;
+			right: -25px;
+			top:0;
+		}
+        .um-switch2 input[type="checkbox"] ~ .um-switch2-check{
+			margin-right: 0px;
+		}
+		.um-switch2 input[type="checkbox"]:checked ~ .um-switch2-check{
+			background: #2DBBFA;
+		}
+		input[type=range]::-webkit-slider-thumb {
+			position: relative;
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			height: 20px;
+			width: 8px;
+			/*border-radius: 50%;*/
+			background: #007aff;
+		}
+		input[type=range]{
+			margin-top: 2px;
+		}
+		.um-tabbar > li{
+			width: 30px;
+		}
+		.um-tabbar > li:last-child > a {
+			border-bottom-right-radius: 0px;
+			border-top-right-radius: 0px;
+		}
+		.um-tabbar > li:first-child > a {
+			border-bottom-left-radius: 0px;
+			border-top-left-radius: 0px;
+		}
+		.float_right {
+			float: right;
+			margin-right: 4%;
+		}
+	</style>
+	<script src="./js/summer.js" ></script>
+	<script src="./js/jquery.min.js" ></script>
+	<script src="./js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+	<script src="./js/layer.js" ></script>
+	<script src="./js/iscroll.js"></script>
+	<script src="./js/LAreaData1.js"></script>
+	<script src="./js/LArea.js"></script>
+	<script src="./js/calculate.js"></script>
+	<script src="./js/appsetting.js"></script>
+	<!--ocr识别-->
+	<!--<script src="./js/driverLicense.js"></script>-->
+	<script src="./js/getBusyOverlay.js"></script>
+	<script src="../js/adaptive.js"></script>
+	<script src="./js/new_main.js"></script>
+
+
+
+
+</head>
+<body>
+<div id="new_main">
+	<div class="um-page" id="index">
+		<!--title-->
+		<div class="um-header" >
+			<a id="goBack" class="um-back"> <span>返回</span></a>
+			<h3 class="main_title">报价器</h3>
+			<a  id="calculate" class="um-header-right "></a>
+		</div>
+		<!--main-->
+		<div class="um-content">
+			<!--tab切换页-->
+			<ul class="um-tabbar um-tabbar-underline pt15 pb15 um-tabbar-switch">
+				<li class="active " data-tar='.news'> <a > <span class="um-tabbar-left">① 项目信息</span> </a></li>
+				<li id="rentalInfo" data-tar='.product'><a> ② 租赁物信息</a></li>
+				<li id="programmerInfo"  data-tar='.game'><a> <span class="um-tabbar-right">③ 方案信息</span> </a></li>
+			</ul>
+			<div class="Artical">
+				<!--项目信息-->
+				<div class="news active ">
+					<div class="um-input-text  um-input-text-way">
+						<span class="um-input-left">案件来源</span>
+						<a  style="width: 70%"><input type="text"  id='caseSource' readonly placeholder="请选择案件来源" /></a>
+					</div>
+					<div class="um-input-text  um-input-text-way">
+						<span class="um-input-left">租赁方式</span>
+						<a  style="width: 70%"><input type="text"  id='select1_dummy' placeholder="请选择租赁方式" readonly/></a>
+					</div>
+					<div class="um-input-text">
+						<div class="area_choice">
+							<span style="font-size: 15px ">所属区域</span>
+							<input id="subArea" type="text"  placeholder="请选择所属区域"  value="" readonly/>
+						</div>
+					</div>
+					<div class="um-input-text ">
+						<div class="area_choice">
+							<span style="font-size: 15px">上牌地</span>
+							<input id="markArea" type="text"  placeholder="请选择上牌地"  value="" readonly/>
+							<!--<input id="value1" type="hidden" value=""/>-->
+						</div>
+					</div>
+					<div class="um-input-text ">
+						<div class="area_choice">
+                           <button id="nextStepOne" class="btn" style="width: 96%">下一步</button>
+						</div>
+					</div>
+
+				</div>
+				<!--租赁物信息-->
+				<div class="product" style="font-size: 15px">
+					<div id="seller_componey" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">经&nbsp;销&nbsp;商</span>
+							<input id="componeyChoice" class="demo4" type="text"    readonly placeholder="请选择经销商" />
+						</div>
+					</div>
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">品牌</span>
+							<input id="car-brand" class="demo4" type="text"    readonly placeholder="请选择品牌"   value=""/>
+						</div>
+					</div>
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">系列</span>
+							<input id="car-series" class="demo4" type="text"    readonly placeholder="系列"   value=""/>
+						</div>
+					</div>
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">型号</span>
+							<input id="car-type" class="demo4" type="text"    readonly placeholder="型号"  value=""/>
+						</div>
+					</div>
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; height: 33px;line-height: 33px">国产/进口</span>
+							<!--<input id="madeWhere" class="demo4" type="text" placeholder="请输入车辆类型" value="国产"/>-->
+							<!--<label class="um-switch1 float_right">-->
+								<!--<input type="checkbox" value="on">-->
+								<!--<div class="um-track">-->
+									<!--<div class="um-handle">-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</label>-->
+							<label class="um-switch2 um-box-vc float_right">
+								<input id="madeWhere" type="checkbox" class="um-switch2" value="" />
+								<span class="um-switch2-check" data-on-text="进口" data-off-text="国产"></span>
+							</label>
+
+						</div>
+					</div>
+
+					
+					<!--<div class="um-input-text um-input-text-a">-->
+						<!--<div class="area_choice">-->
+							<!--<span style="font-size: 15px;">车身颜色</span>-->
+							<!--<input id="carColor" class="demo4" type="text"     placeholder="请填写车身颜色"  value=""/>-->
+						<!--</div>-->
+					<!--</div>-->
+
+
+
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; height: 33px;line-height: 33px; width: 45%;">是否为二手车</span>
+							<label class="um-switch1 float_right">
+								<input type="checkbox" value="on" id="second-car-btn">
+								<div class="um-track">
+									<div class="um-handle">
+									</div>
+								</div>
+							</label>
+
+						</div>
+					</div>
+					<div id="payCountDiv">
+						<div  class="um-input-text um-input-text-a" >
+						<div class="area_choice">
+							<span style="font-size: 15px; width: 45%">发票金额</span>
+							<input id="payCount" class="demo3" type="number" style="width: 45%"     placeholder="请填写发票金额"  value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+						<div class="um-input-text ">
+							<div class="area_choice">
+								<button id="nextStepTwo" class="btn" style="width: 96%">下一步</button>
+							</div>
+						</div>
+					</div>
+					<!--二手车里面的-->
+					<div id="second-hand-car">
+						<div style="height: 5px; background: #f0f0f0; width: 100% "></div>
+
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px;">车辆属地</span>
+								<input id="carDependency" class="demo4" type="text"     placeholder="请录入/输入车辆属地"  value=""/>
+							</div>
+						</div>
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 45%">行程里程(万公里)</span>
+								<input id="mailAge" class="demo4" type="number" style="width: 50%"     placeholder="请录入/输入行驶里程"  value=""/>
+							</div>
+						</div>
+						<div  class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 45%">评估价</span>
+								<input id="payCount1" class="demo3" type="number" style="width: 45%"     placeholder="请填写评估价"  value=""/>
+								<span style="width: 5%">元</span>
+							</div>
+						</div>
+						<!--驾驶证详细信息-->
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 100%">行驶证信息</span>
+								<div class="photoContainer"  style="width: 96%; height: 14rem; margin-top: 10px"> </div>
+							</div>
+						</div>
+
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 45%">车牌号</span>
+								<input id="plateNumber" class="demo4" type="text" style="width: 50%"   placeholder="请输入/扫描"   value=""/>
+							</div>
+						</div>
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 45%">上牌年份</span>
+								<input id="yearOnCard" class="demo4 qu-weight" type="text" style="width: 50%"  placeholder="请输入/扫描"    value=""/>
+							</div>
+						</div>
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px;">品牌型号</span>
+								<input id="productModel"  class="demo4" type="text"     placeholder="请输入/扫描"  value=""/>
+							</div>
+						</div>
+						<div class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 45%">车辆识别代号(VIN)</span>
+								<input id="carVin" style="width: 50%" class="demo4" type="text"     placeholder="请输入/扫描"  value=""/>
+							</div>
+						</div>
+						<div  class="um-input-text um-input-text-a">
+							<div class="area_choice">
+								<span style="font-size: 15px; width: 45%">发动机号码</span>
+								<input id="motorNum" class="demo4" type="text" style="width: 50%"     placeholder="请输入/扫描"  value=""/>
+							</div>
+						</div>
+
+						<div class="um-input-text ">
+							<div class="area_choice">
+								<button id="nextStepThree" class="btn" style="width: 96%">下一步</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--方案信息-->
+				<div class="game" style="font-size: 15px">
+					<div id="positionFlag" class="um-input-text um-input-text-a">
+						<!--<div>金融方案</div>-->
+						<!--<div id="positionPoint">-->
+							<!--<span id="plan_name" class=" mr5"></span>-->
+							<!--<i class="ti-angle-right"></i>-->
+						<!--</div>-->
+
+						<div class="area_choice">
+							<span  style="font-size: 15px; width: 45% ">金融方案</span>
+							<input id="plan_name" class="demo3" type="text" style="width: 45%" readonly placeholder="请选择金融方案"  value=""/>
+							<i style="width: 5%" class="ti-angle-right"></i>
+						</div>
+
+					</div>
+
+                    <div id="downPayCentDiv">
+					<div id="positionFlag2" class="um-input-text um-input-text-a">
+						<div class="first_pay">首付比例</div>
+						<div  class="pay_range">
+							<form>
+								<input id="downPayCent" style="height:20px"  type="range" oninput="x.value=parseInt(range.value)" name="range" value="" min="" max="" step="1">
+								<span class="tc"><output id="downPayCent_output" for="range" name="x"></output></span>
+							</form>
+						</div>
+					</div>
+
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px; width: 45% ">首付金额</span>
+							<input id="downPayMoney" class="demo3" type="text" style="width: 45%" placeholder="请选择首付比例" readonly value="0"/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					</div>
+
+
+					<div id="Deposit_moneyDiv">
+					<div id="positionFlag3" class="um-input-text um-input-text-a">
+						<div class="first_pay">保证金比例</div>
+						<div  class="pay_range">
+							<form>
+								<input style="height: 20px" id="Deposit_money" type="range" oninput="x.value=parseInt(range.value)" name="range" value="" min="" max="" step="1">
+								<span class="tc"><output id="Deposit_money_output" for="range" name="x"></output></span>
+							</form>
+						</div>
+					</div>
+
+					<div class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px; width: 45% ">保证金金额</span>
+							<input id="Deposit_money_num"   class="demo3" type="text" style="width: 45%" placeholder="请选择保证金比例"   readonly value="0"/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					</div>
+
+
+					<div id="positionFlag4" class="um-input-text um-input-text-a">
+						<div>期数</div>
+						<div id="positionPoint2" class="main_periods_btn">
+							<ul class="um-tabbar">
+								<li class="active"><a>12</a></li>
+								<li ><a>24</a></li>
+								<li><a>36</a></li>
+							</ul>
+						</div>
+						<div id="positionPoint3">月</div>
+					</div>
+					<div id="interest_rateDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">利率</span>
+							<input id="interest_rate" style="width: 65%" class="demo4" type="number"  placeholder="请输入年利率"  value=""/>
+							<span style="width: 5%">%</span>
+						</div>
+					</div>
+					<div id="reservePriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">留购价</span>
+							<input id="reservePrice" class="demo4" type="number" style="width: 65%"  placeholder="请输入留购价" value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					<div id="managerPriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px; width: 45% ">管理费收入</span>
+							<input id="managerPrice" class="demo3" type="number" style="width: 45%"   placeholder="请输入管理费收入"  value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					<div id="visitPriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px;  width: 45%">家访费收入</span>
+							<input id="visitPrice" class="demo3" type="number" style="width: 45%" placeholder="请输入家访费收入" value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					<div id="otherPriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px;  width: 45%">其他费用收入</span>
+							<input id="otherPrice" class="demo3" type="number" style="width: 45%" placeholder="请输入其他费用收入"  value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					<div id="insurancePriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px;  width: 45%">保险费押金代收款</span>
+							<input id="insurancePrice" class="demo3" type="number" style="width: 45%"  placeholder="保险费押金代收款"  value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					<div id="cpsPriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span  style="font-size: 15px; ">CPS费</span>
+							<input id="cpsPrice" class="demo4" type="number" style="width: 65%"  placeholder="请输入CPS费"  value=""/>
+							<span style="width: 5%">元</span>
+
+						</div>
+					</div>
+					<div id="agencyPriceDiv" class="um-input-text um-input-text-a">
+						<div class="area_choice">
+							<span style="font-size: 15px; ">中介费</span>
+							<input id="agencyPrice" class="demo4" type="number" style="width: 65%"  placeholder="请输入中介费"  value=""/>
+							<span style="width: 5%">元</span>
+						</div>
+					</div>
+					<!--点击计算-->
+					<div class="um-input-text ">
+						<div class="area_choice">
+							<button id="calculateBtn" class="btn" style="width: 96%">计算</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--租赁方式弹出框-->
+<div id="box1" style="display: none">
+	<p class="box1_h5">请选择租赁方式</p>
+	<div class="um-check-group" id="box1_item">
+	</div>
+</div>
+
+<!--选择经销商弹框-->
+<div id="box2" style="display: none">
+	<p class="box1_h5">请选择经销商</p>
+	<div class="um-check-group" id="box2_item">
+	</div>
+</div>
+<!--相册弹出层-->
+<div class="takePhotosTypeWraper" style="display: none; z-index: 10000">
+	<div class="closeTakePhotosTypeWraper"></div>
+	<div class="selectTakePhotosTypeContainer">
+		<div class="selectTakePhotosTypeItem" id="openCamaraDiv">
+			<span id="selectTakePhotosTypeItemA">打开相机</span>
+		</div>
+		<div class="selectTakePhotosTypeItem borderBottomNone" id="openAlbumDiv">
+			<span id="selectTakePhotosTypeItemB">打开相册</span>
+		</div>
+		<button class="selectTakePhotosTypeCancelBtn">取消</button>
+	</div>
+</div>
+
+
+</body>
+<script src="./js/js_picker/jquery.selector-px.js"></script>
+<script>
+    var choiceVal = localStorage.getItem("choiceVal");
+    $("#plan_name").val(choiceVal);
+
+    var product_name = localStorage.getItem("product_name");
+    var catena_name = localStorage.getItem("catena_name");
+    var model_name = localStorage.getItem("model_name");
+    $("#car-brand").val(product_name);
+    $("#car-series").val(catena_name);
+    $("#car-type").val(model_name);
+</script>
+<script>
+    // 点击二手车显示和隐藏
+    $("#second-hand-car").hide();
+    $("#second-car-btn").click(function(){
+        if ($("#second-car-btn").is(':checked') == true) {
+            $("#payCountDiv").hide();
+            $("#second-hand-car").slideDown();
+		} else {
+            $("#second-hand-car").hide()
+            $("#payCountDiv").show();
+		}
+	});
+    // 点击下一步
+	$("#nextStepOne").on("click", function () {
+        $("#rentalInfo").addClass('active').siblings('.active').removeClass('active');
+        var tar=$("#rentalInfo").attr('data-tar');
+        $(tar).addClass('active').siblings('.active').removeClass('active');
+        if($("#select1_dummy").val() == "原车融资"){
+            $("#seller_componey").hide();
+        }else {
+            $("#seller_componey").show();
+        }
+    })
+    $("#nextStepTwo,#nextStepThree").on("click", function () {
+        $("#programmerInfo").addClass('active').siblings('.active').removeClass('active');
+        var tar=$("#programmerInfo").attr('data-tar');
+        $(tar).addClass('active').siblings('.active').removeClass('active');
+        $("#calculate").text("计算");
+    })
+</script>
+
+<script>
+    $(function () {
+        if($("#select1_dummy").val() == "原车融资"){
+            $("#seller_componey").hide();
+        }else {
+            $("#seller_componey").show();
+        }
+        //自动focus对应tab页
+        var tabName = localStorage.getItem('currentTabName');
+
+        var tabName2 = localStorage.getItem('currentTabName2');
+        if(tabName) {
+            var $tab = $('[data-tar="'+tabName+'"]');
+            $tab.addClass('active').siblings('.active').removeClass('active');
+            $($tab.attr('data-tar')).addClass('active').siblings('.active').removeClass('active');
+            localStorage.removeItem('currentTabName');
+            $("#calculate").text("计算");
+        }
+
+        if(tabName2) {
+            var $tab = $('[data-tar="'+tabName2+'"]');
+            $tab.addClass('active').siblings('.active').removeClass('active');
+            $($tab.attr('data-tar')).addClass('active').siblings('.active').removeClass('active');
+            localStorage.removeItem('currentTabName2');
+        }
+		/*导航更换js*/
+        $('ul.um-tabbar-switch  Li').click(function(){
+            // 进入时 是否显示经销商
+            if ($("#second-car-btn").is(':checked') == true) {
+                $("#payCountDiv").hide();
+                $("#second-hand-car").show();
+            } else {
+                $("#second-hand-car").hide()
+                $("#payCountDiv").show();
+            }
+
+            if($("#select1_dummy").val() == "原车融资"){
+                $("#seller_componey").hide();
+            }else {
+                $("#seller_componey").show();
+            }
+            $(this).addClass('active').siblings('.active').removeClass('active');
+
+            console.log($(this));
+            // 显示计算
+            if ($(this)[0].dataset.tar == ".game") {
+                $("#calculate").text("计算");
+            } else{
+                $("#calculate").text("");
+            }
+            var tar=$(this).attr('data-tar');
+            $(tar).addClass('active').siblings('.active').removeClass('active');
+        });
+    });
+</script>
+<script>
+    var area1 = new LArea();
+    area1.init({
+        'trigger': '#subArea', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+        'valueTo': '#value1', //选择完毕后id属性输出到该位置
+        'keys': {
+            id: 'id',
+            name: 'name'
+        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+        'type': 1, //数据源类型
+        'data': LAreaData //数据源
+    });
+</script>
+<script>
+    var area1 = new LArea();
+    area1.init({
+        'trigger': '#markArea', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+        'valueTo': '#value1', //选择完毕后id属性输出到该位置
+        'keys': {
+            id: 'id',
+            name: 'name'
+        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+        'type': 1, //数据源类型
+        'data': LAreaData //数据源
+    });
+</script>
+<script>
+    $(function () {
+        // ---------【数据部分开始】---------
+        // 整数
+        var quWeightInt = [1990,1991,1992,1993,1994,1995,1996,1997,1998,1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016,2017];
+        // 小数
+        var quWeightFl = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12];
+        //年月
+        $.scrEvent2({
+            data: quWeightInt,
+            data2: quWeightFl,
+            evEle: '.qu-weight',
+            title: '',
+            defValue: 2015,
+            defValue2: 5,
+            linkType: '.',
+            afterAction: function (data1, data2) {
+                $('.qu-weight').val(data1 + '年' + data2 + '月');
+            }
+        })
+    });
+</script>
+</html>
+

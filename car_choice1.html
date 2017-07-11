@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./css/font-icons.css">
+		<script src="./js/summer.js" ></script>		
+		<script src="./js/jquery.min.js" ></script>
+        <script src="./js/car_choice.js"></script>
+        <script src="./js/appsetting.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+            <!--header-->
+			<div class="um-header" >
+				<a class="um-back" id="car_back"> <span>返回</span></a>
+				<h3 class="main_title">选择品牌</h3>
+				<a  class="um-header-right ">确认</a>
+			</div>
+            <!--main-->
+			<div class="um-content">
+                <p class="car_brand">品牌</p>
+                <div class="um-grid um-row">
+                    <div class="um-grid-row tc" id="car_brand">
+                    </div>
+                </div>
+                <div style="height: 5px; background: #f0f0f0; width: 100% "></div>
+                <p class="car_brand">车系</p>
+                <div class="um-grid um-row">
+                    <div class="um-grid-row tc" id="car_series">
+                    </div>
+                </div>
+                <div style="height: 5px; background: #f0f0f0; width: 100% "></div>
+                <p class="car_brand">车型</p>
+                <div id="car_types">
+                </div>
+            </div>
+		</div>
+	</body>
+</html>
+<style scoped>
+	body{
+		 -webkit-transform:none;
+		 transform: none;
+		 -webkit-perspective: 0;
+	}
+    .car_type_item{
+        padding:12px 0px 12px 12px ;
+        border-bottom: 1px solid #F7F7F7;
+    }
+    .car_type_item span{
+        margin-left: 5px;
+        font-size: 15px;
+    }
+    .car_type_item img{
+        height: 25px;
+    }
+	.um-grid-row > div, .um-grid-row > .um-grid-item{
+		flex:none;
+		-webkit-flex:none;
+	}
+	.w{
+		width: 80%;
+        height: 50%;
+	}
+    .um-list{
+        border-top: none;
+    }
+	.car_name{
+		font-size: 14px;
+		color: #9b9b9b;
+        display: inline-block;
+	}
+	.um-header{
+		background: #FFFFFF;
+		border-bottom: 1px solid #2dbbfa;
+		border-image:none;
+		-webkit-border-image: none;
+		position:fixed;
+		width:100%;
+	}
+	.um-back{
+		color: #2dbbfa;
+		left: 0px;
+	}
+	.um-back span{
+		font-size: 14px;
+	}
+	.um-header h3{
+		color: #2dbbfa;
+		font-weight: 500;
+	}
+	.um-header-right{
+		color: #2dbbfa;
+		font-size: 14px;
+	}
+	.um-content{
+		background: #FFFFFF;
+		padding-top: 44px;
+	}
+	.car_brand{
+		margin-top: 10px;
+		padding-bottom: 10px;
+        border-bottom: 1px solid #f7f7f7;
+		padding-left: 12px;
+        color: #000000;
+	}
+	.um-grid-row {
+		border-bottom: 1px solid #f7f7f7;
+	}
+	.um-text-overflow{
+		font-size: 15px;
+		padding: 5px 0px;
+	}
+    .fb{
+        font-weight:normal;
+    }
+</style>
